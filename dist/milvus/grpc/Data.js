@@ -408,7 +408,7 @@ class Data extends Collection_1.Collection {
                 // build output name array
                 const output_fields = [
                     'id',
-                    ...(promise.results.output_fields.length ? promise.results.output_fields : fields_data.map(f => f.field_name)),
+                    ...(promise.results.output_fields.length?promise.results.output_fields:fields_data.map(f => f.field_name)),
                 ];
                 // vector id support int / str id.
                 const idData = ids ? (_d = ids[ids.id_field]) === null || _d === void 0 ? void 0 : _d.data : undefined;
